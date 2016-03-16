@@ -6,6 +6,7 @@ script:
 - bibtex paper
 - latex paper.tex
 - latex paper.tex
+- if [ "$TRAVIS_BRANCH" == "master" ]; then bash ./deploy.sh; fi
 env:
   global:
     GH_REF: github.com/spring-studio-2016/article.git
