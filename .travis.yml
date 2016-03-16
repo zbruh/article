@@ -1,0 +1,8 @@
+before_install:
+- sudo apt-get update && sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra 
+script:
+- latex paper.tex
+- bibtex paper
+- latex paper.tex
+- latex paper.tex
+
