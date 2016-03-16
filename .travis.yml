@@ -1,8 +1,12 @@
 before_install:
-- sudo apt-get update && sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended
+- sudo apt-get update && sudo apt-get install texlive-latex-base texlive-latex-recommended
+  texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended
 script:
 - latex paper.tex
 - bibtex paper
 - latex paper.tex
 - latex paper.tex
-
+env:
+  global:
+    GH_REF: github.com/spring-studio-2016/article.git
+    secure: e2DdXiPmBjdSopFcncCH1gLwSSdeB70hYDq9l5lkKMjuwTjCgUIQxB/5peSkyR6vs00FSg/Z4d5M4bOth44sbjgA6cNAwIc623Jstb+VZ6xn6a2vlN1kOx9ii1unZUT64LWWAxjd17ncLROic2FtIg8ALX40fPUgW/sIGXNOw5KN1jzb1vv8/NJMqdVDbe/LrsAHOI1imdIo7OIVzu4iclXTRTIIAWN3egt5TcRhF1aQWm0cQpapb/gosKZgbacLMFMhtn8jTY/BbqBO05r3x2sr62YAykSoRHf1DtuhxGtgvhp8vI8IznOKh62W6aKVPdYax1/0wEVRH/hsDLkALybpIFlp3VeZHTd6p1jYKtFNctjPPI7CRYsE6IqMf4zF9jhgYu2By08V1OTGHybAxuWW9QQk751TMTst1VasHD/PbFQDrHLB18keKKDoybDigYGUF/jB9wxXQQMinKPA0Au6/oAe6MqBEQKqr7S6AJSlKVOa1esx0L4czLcqj6Vp32TpRYeD4YLeg7iLk6EeT6W7uHQmc7uNsuEQIqIYDRVznwlgilW5YCtYskff09GNwyD0NFPVwwgwYPB74IMwy8cT+KvsfHvEUmJfIT2wx0ubet68uPA65OiEi5lpHc1487ipcapbVBkDVn9DtybOPzDIMnLDgMfu3EXsBawlK2E=
