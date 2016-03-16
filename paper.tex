@@ -1,0 +1,89 @@
+\documentclass[a4]{article}                                     
+\usepackage{url,xspace,epsfig,etoolbox}
+\usepackage{natbib}
+\usepackage{fullpage}
+\usepackage[font=bf]{caption}
+\usepackage{mdwlist}
+
+% No page numbers
+\pagestyle{empty}
+
+% Use 'Arial' font
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Allow point-size specification of font
+\usepackage{fix-cm}
+
+% Allow setting margins on the abstract
+\usepackage{changepage}
+
+\newcommand{\projecttitle}{Definition and directions of narrative-rich games}
+
+% Prevent indentation of new paragraphs
+\setlength{\parindent}{0pt}
+
+% Put space after each paragraph. Note that this matches section titles too,
+% and the workaround is below.
+\setlength{\parskip}{\baselineskip}
+
+% Allow easy overriding of section and subsection commands
+\usepackage{titlesec}
+\titleformat{\section}{\bfseries\fontsize{12}{14.4}\selectfont}{}{0em}{}
+\titleformat{\subsection}{\bfseries\fontsize{11}{13.2}\selectfont}{}{0em}{}
+
+% No blank line after section titles.
+\titlespacing{\section}{0pt}{0pt}{-\baselineskip}
+\titlespacing{\subsection}{0pt}{0pt}{-\baselineskip}
+
+% No blank spaces between references
+\setlength{\bibsep}{0pt}
+
+% Hanging indent of 0.5 inches in references
+\setlength{\bibhang}{0.5in}
+
+% Keep all the screenshot figures the same width
+\newcommand{\screenshotwidth}{2.5in}
+
+% Is this blind or not?
+\newtoggle{blind}
+\toggletrue{blind}
+
+\begin{document}
+
+% Title is bold, centered, 14pt.
+% Standard baseline skip is 1.2*fontsize, or 16.8 here.
+\begin{center}
+\fontsize{14}{16.8}\selectfont
+\bf \projecttitle
+\end{center}
+
+% Gleaning author placement information from the existing proceedings.
+\vspace{-0.25in}
+\begin{center}
+\iftoggle{blind}{
+ % Nothing here: skip authors for blind review
+}{
+Paul Gestwicki, others, Ball State University\\
+pvgestwicki@bsu.edu\\
+}
+\end{center}
+
+
+% Abstract: 150 words or less, extra 0.5in left and right margin.
+% Note that all text is justified.
+%
+\begin{adjustwidth}{0.5in}{0.5in}
+  \textbf{Abstract:}
+ Text goes here.
+\end{adjustwidth}
+
+\section{Introduction}
+
+Content goes here
+
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document} 
