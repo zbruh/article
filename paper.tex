@@ -69,6 +69,8 @@ pvgestwicki@bsu.edu\\
 }
 \end{center}
 
+\newcommand{\totan}{\textit{TotAN}}
+\newcommand{\smersh}{\textit{SMERSH}}
 
 % Abstract: 150 words or less, extra 0.5in left and right margin.
 % Note that all text is justified.
@@ -90,10 +92,183 @@ pvgestwicki@bsu.edu\\
 
 \section{Introduction}
 
-Content goes here.
-We might cite \citet{Koster2013}, but this example is really just a placeholder
-so the bibtex portion of the build script succeeds.
+\textit{Tales of the Arabian Nights}~\citep{Goldberg2009} is a 
+tabletop board game based on the eponymous folk tale.
+It was originally published in 1985~\citep{Goldberg1985} but is more commonly
+known for its 2009 re-release. 
+It is popular within the designer board game hobby with a board game
+rank of 239 (thematic rank 75) on Board Game Geek as of this writing,
+and Shut Up \& Sit Down rank it as the ninth best game of all 
+time~\citep{ShutUp2015}.
+In this game, players control a character within a mythical Arabian
+setting, and players explore the known world to accumulate Story and
+Destiny points. The winner is the one who is able to meet their 
+Story and Destiny point goal while having a successful encounter
+in Baghdad---the City of Peace.
 
+An intriguing property of \textit{Tales of the Arabian Nights}~(hereafter, \textit{TotAN}) is that it eschews the conventional wisdom for game design,
+that player immersion is related to agency.
+When a player has an encounter in \totan, they are told the name of the
+encounter---such as ``angry merchant,''  ``powerful prince,'' or
+``\textbf{put location example here}''---and based only on this information,
+they must choose a reaction from one of the given tables; for example, \textbf{put the content of one table here}.
+Another player then reads a corresponding entry from 
+the \textit{Book of Tales}, which is a \textbf{N}-page
+tome containing \textbf{N} numbered entries.
+Most entries provide introductory text followed by paragraphs
+tagged with skills that the active player may choose to use---without
+knowing the consequences. The reader then narrates the conclusion of the
+encounter and informs the player of their rewards, often in terms of
+Story or Destiny points, gaining new skills, finding treasures, or
+gaining status cards that modify players' options in future encounters.
+To summarize, the player chooses a location on the map, but they do not 
+choose what is encountered; they choose a reaction to the encounter name
+without knowing how it will be interpreted in the story;
+if they have the corresponding skill, they may choose to use it but
+without knowing whether it will help or hinder them.
+\totan{} is not a game of skill, where the player with the best tactics
+wins the game: it is somewhat arbitrary and imbalanced, but from its
+design emerges a fanciful gameplay experience. It is not played to win
+but rather to enjoy the emerging story with friends.
+
+This property of \totan{} reflects several characteristics
+of its source material,
+as our team discovered from reading youth-friendly translations suggested in the
+rulebook (specifically \citet{Neil1994}).
+Like the original stories, \totan{} is a collection of shorter stories
+that are sometimes linked together and sometimes not.
+The characters in the folk tales are often victims of fate with
+very little agency over their own encounters. The games rules follow
+cultural norms expressed in the folk tales:
+you cannot win while sex-changed or on pilgrimage, and both marriage
+and children are great blessings---unless you have an ugly baby,
+which is shameful.
+Baghdad is the most important city in the world, where your adventure starts
+and ends.
+Furthermore, many stories in \totan{} come directly from the tales,
+such as the Sindbad's escape from the valley of diamonds or Aladdin's
+being trapped in a magic cave. 
+
+Playing \totan{}  inspired members of our team to read translations
+of the original tales, which made us recognize the cleverness of the design
+and its elegant dovetailing with the source material.
+Furthermore, in reading the texts, we recognized that we had already
+learned elements of the stories and the culture through playing the game,
+although not always consciously or explicitly.
+This inspired the following analysis, in which we tease apart the
+various elements of \totan{}, considering them from both game design
+and learning design points of view, and then share the results of a pilot
+project to create a technology-enhanced game within the same genre.
+
+\section{Defining the genre of player-narration games}
+
+We propose that \totan{} is one of very few games comprising a genre
+of \textit{player-narration games}, and we define this genre as having
+the following characteristics.
+
+\begin{enumerate}
+\item \textit{Take place in a believable, consistent setting.} 
+ Although the world of \totan{} may be unfamiliar to the player,
+ everything in it is representative of the world described in the original
+ folk tale---complete with the contradictions that add depth and nuance.
+
+\item \textit{Use narrative as a primary feedback mechanism.} 
+ In \totan{}, the player's reaction and skill choice yields two forms
+ of feedback: the narrative description followed by the changes to the
+ game state. The narrative is primary, both chronologically and aesthetically.
+ Note that we follow \citet{Koster2012} in treating narrative as a 
+ feedback mechanism, not a game mechanism.
+
+
+\item \textit{Have measurable goals.} There is a winning condition as part
+ of the social contract of play, following colloquially-accepted 
+ standards for board games. The ``game'' is not simply constrained
+ cooperative storytelling or a role-playing experience without formal end
+ conditions.
+
+\item \textit{Incorporate endogenously meaningful ambiguous decisions.}
+ Following \citet{Burgun2012}, the decisions that one makes in the game
+ are meaningful even though they are made without complete knowledge
+ of the game state. For example, a player makes 
+ the choice of reaction in \totan{} in hopes that it leads toward skills
+ that they have, such as choosing ``Fight'' while in possession of the
+ ``Weapon Use'' skill, even though one does not know whether or not
+ this skill will have relevance in the resulting entry from the
+ \textit{Book of Tales}.
+
+\item \textit{Reward players for decision-making that reflects
+    cultural understanding.}  The knowledge that a player brings to
+  bear on decisions is not just knowledge of in-game systems.  If one
+  chooses to Fight an Angry Ifrit in \totan{} without the Weapon Use
+  skill, it is probably not going to end well. This prediction is not
+  based on my having memorized the \textit{Book of Tales}, nor knowing how many
+  hit dice an Ifrit has (as in \textit{Dungeons \& Dragons} powergaming).
+  Rather, this prediction draws upon a cultural understanding of anger,
+  spirits, violence, and likely much more.
+  However, the game does this without establishing
+  ``right'' and ``wrong'' (``moral/immoral'',
+  ``light side/dark side'', ``paragon/renegade'') choices.  There
+  remain unexpected twists: perhaps fighting the Angry Ifrit without
+  combat skills makes him respect you and grant a boon.  \totan{},
+  after all, is a game that allows the player to choose to ``drink'' a
+  violent storm or ``enter'' a mysterious artifact.  While the world
+  remains consistent, it also embraces the potential for surprising
+  results.
+
+\end{enumerate}
+
+Two formal elements from \totan{} are intentionally not included in the
+genre definition above. Perhaps the most clear omission is players' reading
+each others' stories. While we agree that this is a critical element of 
+\totan{}---and that it dovetails performatively 
+and practomimetically~\citep{Travis2011} with Scheherazade's
+performances in the source material---it is not clear that this is
+characteristic to the genre.  Anecdotal evidence shows that
+players with low reading skills can ruin the play experience for other
+players, while those players could have read their own stories, aloud or not.
+Similarly, \totan{} permits a single-player experience which, while
+having a different aesthetic, still seems to produce the same general outcomes
+we described above.
+
+The other formal element omitted from the genre definition is the use of an
+explicit map. The map is an important tangible aspect of \totan{}, 
+in particular with its representation of Baghdad as the largest, most
+important city in the world. However, we also note that virtual spaces
+can be represented without such an explicit map, such as in the MUD family
+of games or choose-your-own-adventure books, both of which
+use discrete spaces without giving them visual manifestation.
+
+Analyzing \textit{Agents of SMERSH}~\citep{Maxwell2012} establishes that
+these characteristics form a genre and not merely selected elements from one
+game.
+\smersh{} is a cooperative game set in the Cold War, with players as 
+covert agents trying to stop the enigmatic Dr.\ Lobo. 
+Players move across the world collecting resources and battling henchmen,
+facing encounters clearly inspired by \totan{}: flip a card to read an
+encounter title, choose a reaction from a table, hear an introduction,
+and then get different results based on skills. Unlike \totan{},
+\smersh{} uses dice for story resolution, and supporting resource
+management mechanisms introduce important strategic decisions.
+Despite the use of dice for story resolution, the feedback is still
+primarily narrative.
+
+For contrast, consider \textit{Above and Below}~\citep{Laukat2015}, a
+worker-management game about building a city both above and below the
+surface.  \textit{Above and Below} is primarily about building an
+economic engine that generates victory points faster than your
+opponents within a fixed number of rounds. Exploring the underground
+is one source of points, and this is done by determining a random
+entry within its encounter book.  A player reads this entry aloud,
+after which the player is presented with a decision of how to
+react. However, the reaction titles are a thin wrapper around a
+risk-and-reward balance: each has a number which is the number of
+successes required on dice rolls, so players choose the highest number
+they believe they can roll. Higher numbers always equate to better results,
+and this roll is usually the end of the encounter: a successful player
+is given an in-game reward with no other story or narrative.
+Hence, although \textit{Above and Below} includes an encounter book
+that players read to each other, it does not satisfy the characteristics
+to be in the player-narration game genre.
 
 \section{Acknowledgments}
 \textit{The team, organizational, and community partner
