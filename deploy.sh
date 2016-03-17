@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Exit with nonzero status if anything fails
+set -e
+
 mkdir out
 cd out
 cp ../paper.pdf .
